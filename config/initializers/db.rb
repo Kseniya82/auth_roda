@@ -1,5 +1,5 @@
 DB = Sequel.connect(Settings.db.to_hash)
-Sequel.extension :seed
+# Sequel.extension :seed
 
 Sequel::Model.plugin :validation_helpers
 Sequel::Model.plugin :timestamps, update_on_create: true
