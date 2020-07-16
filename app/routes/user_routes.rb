@@ -1,13 +1,15 @@
+require 'byebug'
 class UserRoutes < Application
   prepend Validations
   prepend ApiErrors
   
-  post "/" do
+  post do
     user_params = validate_with!(UserParamsContract)
-
+   
     result = Users::CreateService.call(
-      user: user_params
+      *user_params.to_h.values
     )
+    byebug
     if result.success?
       response.status = 201
     else

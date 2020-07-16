@@ -4,7 +4,7 @@ describe UserSessionRoutes, type: :routes do
   describe 'POST /v1/login' do
     context 'valid params' do
       before do
-        post '/', { email: user.email, password: 'password' }.to_json
+        post '/', { email: user.email, password: 'password' }
       end
 
       it { expect(last_response.status).to eq 201 }
@@ -13,7 +13,7 @@ describe UserSessionRoutes, type: :routes do
 
     context 'invalid params' do
       before do
-        post '/', { email: 'mail@mail.tu', password: 'pass' }.to_json
+        post '/', { email: 'mail@mail.tu', password: 'pass' }
       end
 
       it { expect(last_response.status).to eq 401 }

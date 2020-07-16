@@ -1,7 +1,7 @@
 module Users
   class CreateService
     prepend BasicService
-
+    
     param :name
     param :email
     param :password
