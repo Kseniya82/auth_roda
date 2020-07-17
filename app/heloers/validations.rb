@@ -2,9 +2,7 @@ module Validations
   class InvalidParams < StandardError; end
 
   def validate_with!(validation)
-    result = validate_with(validation)
-    raise InvalidParams if result.failure?
-    result
+    validate_with(validation)
   end
 
   def validate_with(validation)

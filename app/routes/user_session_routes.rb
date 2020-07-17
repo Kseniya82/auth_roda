@@ -1,9 +1,7 @@
-require 'byebug'
 class UserSessionRoutes < Application
   prepend Validations
   prepend ApiErrors
   post do
-    byebug
     session_params = validate_with!(SessionParamsContract)
     result = UserSessions::CreateService.call(*session_params.to_h.values)
 

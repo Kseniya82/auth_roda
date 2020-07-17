@@ -11,7 +11,7 @@ describe UserRoutes, type: :routes do
     end
 
     context 'invalid params' do
-      let(:params) {  { name: 'bad_user' } }
+      let(:params) { { name: 'bad_user', email: 'user@test.com', password: '' } }
       
       it 'returns an error' do
         post '/', params
