@@ -21,7 +21,7 @@ gem 'sequel_secure_password'
 gem 'dry-initializer', '~> 3.0', '>= 3.0.3'
 gem 'dry-validation', '~> 1.5', '>= 1.5.1'
 
-gem 'activesupport', '~> 6.0', '>= 6.0.3.2', require: false
+gem 'activesupport', '~> 6.0', require: false
 gem 'fast_jsonapi', '~> 1.5'
 
 gem 'jwt', '~> 2.2.1'
